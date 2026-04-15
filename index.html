@@ -20,6 +20,7 @@
                     <li><a href="#kontak">Kontak</a></li>
                     <li><a href="#media-sosial">Media Sosial</a></li>
                     <li><a href="#form">Form</a></li>
+                    <li><a href="#todo">To Do List</a></li>
                 </ul>
             </nav>
         </div>
@@ -103,6 +104,16 @@
             </form>
 
             <div id="hasil"></div>
+        </section>
+
+        <!-- To Do List -->
+        <section id="todo">
+            <h2>To Do List</h2>
+            <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+                <input type="text" id="task-input" placeholder="Masukkan tugas baru..." style="flex: 1; padding: 8px;">
+                <button type="button" id="add-task-btn" style="padding: 8px 15px;">Tambah</button>
+            </div>
+            <ul id="task-list" style="list-style-type: none; padding: 0;"></ul>
         </section>
     </main>
 
