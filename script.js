@@ -82,4 +82,29 @@ document.addEventListener("DOMContentLoaded", function () {
             addTaskBtn.click();
         }
     });
+
+    // ==============================
+    // DARK MODE & LIGHT MODE (TAMBAHAN)
+    // ==============================
+    const toggleBtn = document.getElementById("theme-toggle");
+
+    if (toggleBtn) {
+        // Cek mode yang tersimpan
+        if (localStorage.getItem("theme") === "dark") {
+            document.body.classList.add("dark-mode");
+            toggleBtn.textContent = "☀️ Light Mode";
+        }
+
+        toggleBtn.addEventListener("click", function () {
+            document.body.classList.toggle("dark-mode");
+
+            if (document.body.classList.contains("dark-mode")) {
+                toggleBtn.textContent = "☀️ Light Mode";
+                localStorage.setItem("theme", "dark");
+            } else {
+                toggleBtn.textContent = "🌙 Dark Mode";
+                localStorage.setItem("theme", "light");
+            }
+        });
+    }
 });

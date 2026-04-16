@@ -28,7 +28,35 @@ body {
   display: flex;
   justify-content: space-between;
 }
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
 
+/* Style tombol */
+#theme-toggle {
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  background: black;
+  color: white;
+  transition: 0.3s;
+}
+
+/* Tombol saat dark mode */
+body.dark-mode #theme-toggle {
+  background: white;
+  color: black;
+}
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+  background-color: #1e1e1e !important;
+  color: white !important;
+  border: 1px solid #444 !important;
+}
 /* LOGO */
 .logo {
   font-size: 20px;
