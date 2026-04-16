@@ -57,6 +57,11 @@ document.addEventListener("DOMContentLoaded", function () {
             const span = document.createElement("span");
             span.textContent = taskText;
 
+            // klik task untuk tandai selesai (TAMBAHAN)
+            span.addEventListener("click", function () {
+                span.classList.toggle("done");
+            });
+
             const deleteBtn = document.createElement("button");
             deleteBtn.textContent = "Hapus";
             deleteBtn.style.cssText = "background: #ff4d4d; color: white; border: none; padding: 5px 10px; cursor: pointer; border-radius: 3px;";
